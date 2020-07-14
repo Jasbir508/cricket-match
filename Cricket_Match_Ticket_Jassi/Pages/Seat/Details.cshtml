@@ -1,0 +1,31 @@
+﻿@page
+@model Cricket_Match_Ticket_Jassi.Pages.Seat.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Seat</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Seat.SeatNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Seat.SeatNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Seat.SeatSide)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Seat.SeatSide)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Seat.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

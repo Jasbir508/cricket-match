@@ -1,0 +1,34 @@
+﻿@page
+@model Cricket_Match_Ticket_Jassi.Pages.Seat.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Seat</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Seat.SeatNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Seat.SeatNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Seat.SeatSide)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Seat.SeatSide)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Seat.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
